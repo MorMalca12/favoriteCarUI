@@ -1,0 +1,9 @@
+<!--    Can use CSS Grid Layout instead of flexbox-->
+    <div class="d-flex  justify-content-around  flex-wrap">
+      <div *ngFor="let car of cars">
+        <app-car (click)="vote(car)" class="m-1" [votesNumber]=car.votesNumber [imageName]=car.imgName
+                 [progressBarWidth]=getProgressBarWidth(car.votesNumber)></app-car>
+      </div>
+    </div>
+
+
